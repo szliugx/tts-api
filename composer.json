@@ -1,0 +1,20 @@
+{
+    "name": "vinci/tts-api",
+    "description": "about voice api",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "VinCi\\TtsApi\\": "src"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "szliugx",
+            "email": "szliugx@gmail.com"
+        }
+    ]
+
+}
