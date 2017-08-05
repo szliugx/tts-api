@@ -2,11 +2,11 @@
 
 <p align="center">组合市面上tts语音合成API的一款工具</p>
 ##代码使用前
-```
-composer require wenxi/tts-api
+```shell
+$ composer require wenxi/tts-api
 ```
 ##调用代码示例如下
-```
+```php
 <?php
 /**
  * User: szliugx@gmail.com
