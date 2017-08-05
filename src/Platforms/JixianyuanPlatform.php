@@ -5,12 +5,12 @@
  * Time: 上午11:45
  */
 
-namespace VinCi\TtsApi\Platforms;
+namespace WenXi\TtsApi\Platforms;
 
-use VinCi\TtsApi\Contracts\PlatformInterface;
-use VinCi\TtsApi\Exceptions\InvalidArgumentException;
-use VinCi\TtsApi\Support\Config;
-use VinCi\TtsApi\Traits\HasHttpRequest;
+use WenXi\TtsApi\Contracts\PlatformInterface;
+use WenXi\TtsApi\Exceptions\InvalidArgumentException;
+use WenXi\TtsApi\Support\Config;
+use WenXi\TtsApi\Traits\HasHttpRequest;
 
 class JixianyuanPlatform implements PlatformInterface
 {

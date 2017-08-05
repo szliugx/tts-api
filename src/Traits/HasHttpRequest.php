@@ -5,7 +5,7 @@
  * Time: 下午10:48
  */
 
-namespace VinCi\TtsApi\Traits;
+namespace WenXi\TtsApi\Traits;
 
 use GuzzleHttp\Client;
 use Psr\Http\Message\ResponseInterface;

@@ -5,7 +5,7 @@
  * Time: 下午12:27
  */
 
-namespace VinCi\TtsApi\Exceptions;
+namespace WenXi\TtsApi\Exceptions;
 
 class InvalidArgumentException extends Exception
 {

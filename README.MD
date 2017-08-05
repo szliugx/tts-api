@@ -12,7 +12,7 @@
  */
 
 include_once './vendor/autoload.php';
-use VinCi\TtsApi\Tts;
+use WenXi\TtsApi\Tts;
 
 $config = [
     'apiKey' => 'apiKey',
@@ -27,10 +27,10 @@ $tts = new Tts($config);
 try{
     $response = $tts->send("hello,world!","jixianyuan");
     var_dump($response);
-}catch (\VinCi\TtsApi\Exceptions\InvalidArgumentException $ie){
+}catch (\WenXi\TtsApi\Exceptions\InvalidArgumentException $ie){
     echo "tts参数异常\n";
     echo $ie->getMessage();
-}catch(\VinCi\TtsApi\Exceptions\Exception $e){
+}catch(\WenXi\TtsApi\Exceptions\Exception $e){
     echo "tts异常\n";
     echo $e->getMessage();
 }catch(Exception $e){

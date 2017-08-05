@@ -5,10 +5,10 @@
  * Time: 上午11:46
  */
 
-namespace VinCi\TtsApi\Platforms;
+namespace WenXi\TtsApi\Platforms;
 
-use VinCi\TtsApi\Contracts\PlatformInterface;
-use VinCi\TtsApi\Support\Config;
+use WenXi\TtsApi\Contracts\PlatformInterface;
+use WenXi\TtsApi\Support\Config;
 
 class BaiduPlatform implements PlatformInterface
 {

@@ -5,16 +5,16 @@
  * Time: 上午11:29
  */
 
-namespace VinCi\TtsApi;
+namespace WenXi\TtsApi;
 
-use VinCi\TtsApi\Contracts\PlatformInterface;
-use VinCi\TtsApi\Exceptions\InvalidArgumentException;
-use VinCi\TtsApi\Support\Config;
+use WenXi\TtsApi\Contracts\PlatformInterface;
+use WenXi\TtsApi\Exceptions\InvalidArgumentException;
+use WenXi\TtsApi\Support\Config;
 
 /**
  * 语音合成API
  * Class Tts
- * @package VinCi\TtsApi
+ * @package WenXi\TtsApi
  */
 class Tts
 {
@@ -76,7 +76,7 @@ class Tts
     /**
      * 创建平台实例
      * @param $platform
-     * @return \VinCi\TtsApi\Contracts\PlatformInterface
+     * @return \WenXi\TtsApi\Contracts\PlatformInterface
      * @throws InvalidArgumentException
      */
     protected function makePlatform($platform)

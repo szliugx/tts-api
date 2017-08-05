@@ -5,7 +5,7 @@
  * Time: 下午12:31
  */
 
-namespace VinCi\TtsApi\Exceptions;
+namespace WenXi\TtsApi\Exceptions;
 
 class Exception extends \Exception
 {

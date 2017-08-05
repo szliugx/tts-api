@@ -5,7 +5,7 @@
  * Time: 上午11:37
  */
 
-namespace VinCi\TtsApi\Support;
+namespace WenXi\TtsApi\Support;
 
 use ArrayAccess;
 

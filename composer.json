@@ -1,12 +1,12 @@
 {
-    "name": "vinci/tts-api",
+    "name": "wenxi/tts-api",
     "description": "about voice api",
     "require": {
         "guzzlehttp/guzzle": "^6.3"
     },
     "autoload": {
         "psr-4": {
-            "VinCi\\TtsApi\\": "src"
+            "WenXi\\TtsApi\\": "src"
         }
     },
     "license": "MIT",

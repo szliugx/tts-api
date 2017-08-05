@@ -5,7 +5,7 @@
  * Time: 下午11:10
  */
 
-namespace VinCi\TtsApi\Exceptions;
+namespace WenXi\TtsApi\Exceptions;
 
 class PlatformErrorException extends Exception
 {

@@ -5,9 +5,9 @@
  * Time: 上午11:35
  */
 
-namespace VinCi\TtsApi\Contracts;
+namespace WenXi\TtsApi\Contracts;
 
-use VinCi\TtsApi\Support\Config;
+use WenXi\TtsApi\Support\Config;
 
 interface PlatformInterface
 {
