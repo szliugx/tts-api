@@ -27,12 +27,19 @@ class Tts
         $this->config = new Config($config);
     }
 
+    /**
+     * 发送请求
+     * @param $text
+     * @param $platformName
+     * @return mixed
+     */
     public function send($text, $platformName)
     {
         return $this->getPlatform($platformName)->send($text, $this->config);
     }
 
     /**
+     * 获取创建好的平台实例
      * @param $name
      * @return PlatformInterface
      * @throws InvalidArgumentException

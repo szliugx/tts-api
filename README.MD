@@ -18,31 +18,54 @@ $ composer require wenxi/tts-api
  * Time: 下午2:30
  */
 
+header("Content-type: text/html; charset=utf-8");
+
 include_once './vendor/autoload.php';
 use WenXi\TtsApi\Tts;
 
-$config = [
-    'apiKey' => 'apiKey',
-    'apiSecret' => '123456',
-    'expires' => time()+3600,
-    'voice' => 'cnmale',
-    'format' => 'MP3',
-    'speed' => 1,
+$configs = [
+    'jixianyuan' => [
+        'apiKey'       => 'cfa5620888446****c939a176096b491',
+        'apiSecretKey' => 'f35b13eb1b9a4****f742445368ecbdd',
+        'expires'      => time() + 3600,
+        'voice'        => 'cnmale',
+        'format'       => 'MP3',
+        'speed'        => 1,
+    ],
+    'baidu'      => [
+        'client_id'     => 'BsUAmCwHCLQUU****hnoUAatpHtnHGlU',
+        'client_secret' => 'HM3oWwefKKZbG****v1xkSF071bZy9ne',
+        'lan'           => 'zh',
+        'ctp'           => 1,
+        'cuid'          => '',
+        'spd'           => '',
+        'pit'           => '',
+        'vol'           => '',
+        'per'           => '',
+    ]
 ];
 
+//$platformName = 'jixianyuan';
+$platformName = 'baidu';
+$config       = $configs[$platformName];
+
 $tts = new Tts($config);
-try{
-    $response = $tts->send("hello,world!","jixianyuan");
+
+try {
+    $response = $tts->send("hello,world!", $platformName);
     var_dump($response);
-}catch (\WenXi\TtsApi\Exceptions\InvalidArgumentException $ie){
+} catch (\WenXi\TtsApi\Exceptions\InvalidArgumentException $iex) {
     echo "tts参数异常\n";
-    echo $ie->getMessage();
-}catch(\WenXi\TtsApi\Exceptions\Exception $e){
+    echo $iex->getMessage();
+} catch (\WenXi\TtsApi\Exceptions\PlatformErrorException $pex) {
+    echo "tts平台异常\n";
+    echo $pex->getMessage();
+} catch (\WenXi\TtsApi\Exceptions\Exception $ex) {
     echo "tts异常\n";
-    echo $e->getMessage();
-}catch(Exception $e){
+    echo $ex->getMessage();
+} catch (Exception $ex) {
     echo "系统异常\n";
-    echo $e->getMessage();
+    echo $ex->getMessage();
 }
 
 ```

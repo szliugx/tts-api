@@ -16,7 +16,7 @@ class JixianyuanPlatform implements PlatformInterface
 {
     use HasHttpRequest;
 
-    const REQUEST_URL = "http://speech.api.jixianyuan.com/tts";
+    const REQUEST_URL = "http://api.jixianyuan.com/tts/api";
 
     public function send($text, Config $config)
     {
@@ -37,7 +37,7 @@ class JixianyuanPlatform implements PlatformInterface
 
         $sendParams = $this->formatParams($params);
         $str = $this->joinParams($sendParams);
-        $apiSecret = $config->get('apiSecret');
+        $apiSecret = $config->get('apiSecretKey');
         $sendParams['signature'] = hash_hmac("sha1", $str, $apiSecret);
 
         $response = $this->post(self::REQUEST_URL,$sendParams);
