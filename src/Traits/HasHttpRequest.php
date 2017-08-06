@@ -93,6 +93,8 @@ trait HasHttpRequest
     }
 
     /**
+     * 此方法如果是成功返回资源流，不做处理（否则不成功转换成json格式）
+     *
      * Convert response contents to json.
      *
      * @param \Psr\Http\Message\ResponseInterface $response
@@ -101,6 +103,11 @@ trait HasHttpRequest
      */
     protected function unwrapResponse(ResponseInterface $response)
     {
+        //针对极限元平台特殊的返回类型
+        if($response->getStatusCode() != 200 && $response->getHeaderLine('Content-Type') == 'application/json'){
+            return ['httpStatusCode' => $response->getStatusCode(), 'responseBody' => $response->getBody()->getContents()];
+        }
+
         $contentType = $response->getHeaderLine('Content-Type');
         $contents = $response->getBody()->getContents();
 
